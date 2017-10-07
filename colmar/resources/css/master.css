@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+
+/*
+FONTS:
+  Headers
+font-family: 'Roboto', sans-serif;
+  no-Headers
+font-family: 'Open Sans', sans-serif;
+*/
+
+/*
+TABLE OF CONTENT
+  1. Global
+    1.1. Text
+  2. Phone (Mobile First)
+    2.1. Header
+      2.1.1. Nav
+    2.2. Main
+    2.3. Footer
+  3. Tablet
+    3.1. Header
+    3.2. Main
+    3.3. Footer
+  4. Computers
+    4.1. Header
+    4.2. Main
+    4.3. Footer
+*/
+
+/* 1. GLOBAL */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border:  0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: hsl(360, 0%, 95%);
+}
+
+body > * {
+  flex-shrink: 0;
+}
+
+/* 1.1. TEXT */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.4;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+  color: hsl(360, 0%, 20%);
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+p, a, button {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.4;
+  color: hsl(360, 0%, 30%);
+}
+
+a {
+  color: hsl(240, 100%, 47%);
+  text-decoration: none;
+  transition: color 400ms ease-in-out;
+}
+
+a:hover {
+  color: hsl(240, 100%, 7%);
+}
+
+/* 2. PHONES */
+/* 2.1. HEADER */
+header {
+  margin-top: 4rem;
+  height: auto;
+  background-color: hsl(360, 0%, 80%);
+}
+
+header .jumbotron {
+  width: 100%;
+}
+
+header .banner {
+  padding: 2rem 1rem;
+}
+
+header .banner h1 {
+  margin-bottom: 2rem;
+}
+
+header .banner h3 {
+  margin-bottom: 1.5rem;
+}
+
+header .banner button {
+  width: 100%;
+  color: white;
+  font-size: 1.2rem;
+  background-color: hsl(360, 0%, 40%);
+  padding: 0.6rem 0;
+  border: 0;
+}
+
+header .banner button:active {
+  background-color: hsl(360, 0%, 20%);
+}
+
+/* 2.1.1. NAV */
+
+nav {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  display: flex;
+  height: 4rem;
+  width: 100%;
+  align-items: center;
+  z-index: 1;
+}
+
+nav .desktop {
+  display: none;
+}
+
+nav .mobile {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* 2.2. MAIN */
+main {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+main > * {
+  flex: 0;
+}
+
+main > section {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 1rem 1rem;
+  border-width: thin 0 0 0;
+  border-style: solid;
+  border-color: gray;
+}
+
+main section .jumbotron {
+  display: none;
+}
+
+main section .more {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+main section .more section {
+  margin-bottom: 4rem;
+}
+
+main section .more section:last-child {
+  margin-bottom: 0;
+}
+
+main section img:first-child { /* Images for mobiles. */
+  width: 100%;
+}
+
+main section img:nth-child(2) { /* Images for desktops. */
+  display: none;
+}
+
+main section .info {
+  margin-top: 1rem;
+}
+
+main section .info h3, main section .info p {
+  margin-bottom: 0.5rem;
+}
+
+/* Start courses section */
+
+main section h1 { /* Centering the title of courses section. */
+  text-align: center;
+}
+
+main section .course {
+  width: auto;
+  height: auto;
+  padding: 1rem;
+  background-color: hsl(360, 0%, 75%);
+  margin: 0 0 .5rem;
+}
+
+main section .course:last-child {
+  margin: 0;
+}
+
+main section .course img {
+  display: none;
+}
+
+main section .course a {
+  display: none;
+}
+
+main section .course p {
+  display: none;
+}
+/* End of courses section */
+
+/* 2.3. FOOTER */
+footer {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 1rem;
+  font-size: 0.75rem;
+}
+
+footer .more {
+  display: none;
+}
+
+/* 4. COMPUTER */
+@media (min-width: 760px) {
+h1 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.19rem;
+}
+
+  /* 4.1. HEADER */
+  header {
+    display: flex;
+    width: 100%;
+    flex-flow: row nowrap;
+    padding: 2rem 1.5rem;
+  }
+
+  header img.jumbotron {
+    width: 60%;
+    height: 100%;
+  }
+
+  header .banner {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin: 0 0 0 1.5rem;
+  }
+
+  nav {
+    background-color: hsla(360, 100%, 100%, 0.99);
+  }
+
+  nav .mobile {
+    display: none;
+  }
+
+  nav .desktop {
+    display: flex;
+    width: 100%;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto 1.5rem;
+  }
+
+  nav .desktop #sitename {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  nav .desktop #sitename img {
+    height: 3rem;
+    width: auto;
+  }
+
+  nav .desktop #sitename h1 {
+    text-transform: uppercase;
+    font-weight: normal;
+    color: hsl(360, 0%, 30%);
+  }
+
+  nav .desktop #sitename h1 b {
+    font-weight: bold;
+    color: hsl(360, 0%, 20%);
+  }
+
+  nav .desktop .nav {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  nav .desktop .nav a {
+    color: hsl(360, 0%, 30%);
+    margin: 0.5rem;
+  }
+
+  nav .desktop .nav a:last-child {
+    margin-right: 0;
+  }
+
+  /* 4.2. MAIN */
+  main section .course a {
+    display: inline;
+    text-transform: uppercase;
+    color: hsl(360, 0%, 30%);
+  }
+
+  main #latest-posts, main #thesis-exhibit .more {
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  main #latest-posts .jumbotron {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 60%;
+    margin: auto 1.5rem;
+  }
+
+  main #latest-posts .jumbotron .info h1 {
+    text-align: left;
+  }
+
+  main #latest-posts .jumbotron .info > * {
+    margin-bottom: 1.5rem;
+  }
+
+  main #latest-posts .more {
+    width: 40%;
+  }
+
+  main #latest-posts .more section {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 1rem;
+  }
+
+  main #latest-posts .more section:last-child {
+    background-color: hsl(360, 0%, 80%);
+  }
+
+  main #latest-posts .more section img:first-child {
+    display: none;
+  }
+
+  main #latest-posts .more section img:nth-child(2) {
+    display: block;
+    width: 30%;
+    height: 100%;
+    margin-right: 1rem;
+  }
+
+  main > section:nth-child(2) {
+    background-color: hsl(360, 0%, 80%);
+  }
+
+  main section:nth-child(2) h1 {
+    margin: 1rem;
+  }
+
+  main #courses {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 1rem 1.5rem;
+  }
+
+  main #courses .course {
+    display: flex;
+    width: 27%;
+    padding: 0;
+    background-color: white;
+    flex-flow: column nowrap;
+    margin: 2rem;
+  }
+
+  main #courses .course img, main #courses .course p {
+    display: block;
+  }
+
+  main #courses .course .info {
+    margin: 1rem;
+  }
+
+  main #thesis-exhibit {
+
+  }
+
+  /* 4.3. FOOTER */
+  footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    border-top: thin solid gray;
+  }
+
+  footer p {
+    font-size: .75rem;
+  }
+
+  footer .more {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  footer .more p {
+    margin: 0 1rem;
+  }
+
+}
